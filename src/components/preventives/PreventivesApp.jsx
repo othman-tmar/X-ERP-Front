@@ -5,10 +5,10 @@ import ListPreventives from './ListPreventives';
 import CreatePreventive from './CreatePreventive';
 const PreventivesApp = () => {
     
-        const dispatch = useDispatch();
+      /*   const dispatch = useDispatch();
         useEffect(() => {
         dispatch(getPreventives());
-        },[])
+        },[]) */
         
   return (
     <div className='m-3'>
