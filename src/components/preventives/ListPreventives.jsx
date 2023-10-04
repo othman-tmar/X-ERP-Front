@@ -14,7 +14,7 @@ import { Button } from "@mui/material";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import jsPDF from "jspdf";
 import "jspdf-autotable";
-
+import { selectPreventives, selectIsLoading, selectError } from '../../features/PrevenMainSlice.selectors';
 const ListPreventives = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
@@ -23,10 +23,12 @@ const ListPreventives = () => {
 
   const [showModal, setShowModal] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
-  const { preventives, isLoading, error } = useSelector(
+ /*  const { preventives, isLoading, error } = useSelector(
     (state) => state.storePreventives
-  );
-
+  ); */
+ const preventives = useSelector(selectPreventives);
+  const isLoading = useSelector(selectIsLoading);
+  const error = useSelector(selectError);
   const [selectedItem, setSelectedItem] = useState(null);
   const [selectedRow, setSelectedRow] = useState(null);
 
