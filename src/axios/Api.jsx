@@ -1,6 +1,6 @@
 import axios from "axios";
 
-axios.defaults.baseURL = 'http://localhost:3002/api';
+axios.defaults.baseURL = 'https://erp-back.onrender.com';
 
 
 export function getAxiosInstance() {
